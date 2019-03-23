@@ -1,17 +1,25 @@
 {
-    "name": "likai/test",
+    "name": "ceshi/output_standard_log",
     "authors": [
         {
-            "name": "likai",
-            "email": "likai@shuzilm.cn"
+            "name": "ylb",
+            "email": "715417367@qq.com"
         }
     ],
-    "require": {
-    	"php": ">=5.3.0"
-    },
+    "require": {},
     "autoload": {
-        "psr-0": {
-            "Jenner\\Zebra\\MessageQueue": "src/"
+        "psr-4": {
+            "Output\\Standardlog\\": "src/Output/Standardlog/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Output\\Standardlog\\StandardlogServiceProvider"
+            ],
+            "aliases": {
+                "Standardlog": "Output\\Standardlog\\Facades\\Standardlog"
+            }
         }
     }
 }
